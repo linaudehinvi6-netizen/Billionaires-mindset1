@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Découvrez Billionaires'mindset de HINVI Linaude : intelligence financière, entrepreneuriat et gestion de l'argent.">
+
+    <title>Billionaires'mindset | HINVI Linaude</title>
+
+    <style>
+        :root {
+            --noir: #090909;
+            --noir-clair: #151515;
+            --or: #d4af37;
+            --blanc: #ffffff;
+            --gris: #c4c4c4;
+            --vert: #25d366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--noir);
+            color: var(--blanc);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            background: #050505;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.35);
+        }
+
+        .logo {
+            color: var(--or);
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        nav a {
+            color: var(--blanc);
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--or);
+        }
+
+        .hero {
+            min-height: 590px;
+            padding: 75px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 55px;
+            background:
+                radial-gradient(
+                    circle at 80% 45%,
+                    rgba(212, 175, 55, 0.13),
+                    transparent 38%
+                );
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .tag {
+            display: inline-block;
+            color: var(--or);
+            border: 1px solid var(--or);
+            padding: 5px 13px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-size: clamp(36px, 5vw, 62px);
+            line-height: 1.15;
+            margin-bottom: 22px;
+        }
+
+        .gold {
+            color: var(--or);
+        }
+
+        .hero-text p {
+            max-width: 560px;
+            color: var(--gris);
+            margin-bottom: 24px;
+        }
+
+        .price {
+            color: var(--or);
+            font-size: 30px;
+            font-weight: bold;
+            margin: 18px 0 24px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--or);
+            color: #111111;
+            padding: 14px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: #f0d36d;
+            transform: translateY(-2px);
+        }
+
+        .book-area {
+            flex: 0 0 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .book {
+            width: 260px;
+            min-height: 365px;
+            padding: 28px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #252525, #050505);
+            border: 2px solid var(--or);
+            box-shadow:
+                12px 12px 0 #55451a,
+                0 0 40px rgba(212, 175, 55, 0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .book-top {
+            color: var(--or);
+            font-size: 10px;
+            letter-spacing: 2px;
+        }
+
+        .book h2 {
+            font-size: 30px;
+            line-height: 1.25;
+            margin: 30px 0;
+        }
+
+        .book-bottom {
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        section {
+            padding: 75px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--gris);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: var(--noir-clair);
+            border: 1px solid #292929;
+            padding: 28px;
+            border-radius: 6px;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--or);
+            transform: translateY(-4px);
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .card h3 {
+            color: var(--or);
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--gris);
+            font-size: 14px;
+        }
+
+        .author {
+            background: #111111;
+            text-align: center;
+        }
+
+        .author-box {
+            max-width: 760px;
+            margin: auto;
+        }
+
+        .author-box h3 {
+            color: var(--or);
+            font-size: 26px;
+            margin-bottom: 18px;
+        }
+
+        .author-box p {
+            color: var(--gris);
+            margin-bottom: 15px;
+        }
+
+        .purchase {
+            text-align: center;
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(212, 175, 55, 0.10),
+                    transparent 65%
+                );
+        }
+
+        .purchase-box {
+            max-width: 650px;
+            margin: auto;
+            background: var(--noir-clair);
+            border: 1px solid var(--or);
+            padding: 40px 25px;
+            border-radius: 8px;
+        }
+
+        .purchase-box h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .purchase-box > p {
+            color: var(--gris);
+            margin-bottom: 15px;
+        }
+
+        .payment-info {
+            text-align: left;
+            background: #090909;
+            border: 1px solid #333333;
+            padding: 22px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+
+        .payment-info h3 {
+            color: var(--or);
+            margin-bottom: 12px;
+        }
+
+        .payment-info p {
+            margin-bottom: 8px;
+        }
+
+        .note {
+            font-size: 12px;
+            color: #aaaaaa;
+            margin-top: 15px;
+        }
+
+        .whatsapp-btn {
+            background: var(--vert);
+            color: #062b13;
+        }
+
+        .whatsapp-btn:hover {
+            background: #52e38a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 7%;
+            border-top: 1px solid #292929;
+            color: #aaaaaa;
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: var(--or);
+        }
+
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 55px;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .book-area {
+                flex: auto;
+                margin: 20px 0;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .logo {
+                font-size: 17px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .book {
+                width: 235px;
+                min-height: 335px;
+            }
+
+            .purchase-box {
+                padding: 28px 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- EN-TÊTE -->
+    <header>
+        <div class="logo">BILLIONAIRES'MINDSET</div>
+
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#livre">Le livre</a>
+            <a href="#auteur">Auteur</a>
+            <a href="#acheter">Acheter</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ACCUEIL -->
+        <section class="hero" id="accueil">
+
+            <div class="hero-text">
+                <div class="tag">PENSEZ PLUS GRAND</div>
+
+                <h1>
+                    Changez votre vision de
+                    <span class="gold">l'argent.</span>
+                </h1>
+
+                <p>
+                    Découvrez <strong>Billionaires'mindset</strong>,
+                    un livre consacré à l'intelligence financière,
+                    à l'entrepreneuriat, à la gestion de l'argent et
+                    aux leçons tirées du parcours de grands entrepreneurs.
+                </p>
+
+                <div class="price">2 000 F CFA</div>
+
+                <a class="btn" href="#acheter">
+                    Acheter le livre
+                </a>
+            </div>
+
+            <!-- COUVERTURE PROVISOIRE DU LIVRE -->
+            <div class="book-area">
+                <div class="book">
+                    <div class="book-top">
+                        LIVRE DE DÉVELOPPEMENT PERSONNEL
+                    </div>
+
+                    <h2>
+                        BILLIONAIRES'<br>
+                        <span class="gold">MINDSET</span>
+                    </h2>
+
+                    <div class="book-bottom">
+                        HINVI LINAUDE
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- PRÉSENTATION DU LIVRE -->
+        <section id="livre">
+
+            <div class="section-title">
+                <h2>
+                    Pourquoi lire ce <span class="gold">livre ?</span>
+                </h2>
+
+                <p>
+                    Développez votre manière de penser et de gérer votre argent.
+                </p>
+            </div>
+
+            <div class="features">
+
+                <div class="card">
+                    <div class="icon">💰</div>
+
+                    <h3>Intelligence financière</h3>
+
+                    <p>
+                        Réfléchissez à vos habitudes financières et apprenez
+                        à mieux organiser vos ressources.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">🚀</div>
+
+                    <h3>Entrepreneuriat</h3>
+
+                    <p>
+                        Découvrez des principes utiles pour développer
+                        vos idées, entreprendre et rechercher des opportunités.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="icon">📈</div>
+
+                    <h3>État d'esprit</h3>
+
+                    <p>
+                        Inspirez-vous des leçons du monde des affaires
+                        pour réfléchir à vos objectifs et à votre avenir.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- AUTEUR -->
+        <section class="author" id="auteur">
+
+            <div class="author-box">
+                <div class="section-title">
+                    <h2>
+                        À propos de <span class="gold">l'auteur</span>
+                    </h2>
+                </div>
+
+                <h3>HINVI Linaude</h3>
+
+                <p>
+                    Passionné par l'apprentissage, l'entrepreneuriat et
+                    l'évolution personnelle, HINVI Linaude souhaite partager
+                    des réflexions et des principes pouvant aider chacun
+                    à développer sa vision de l'argent et de la réussite.
+                </p>
+
+                <p>
+                    <strong class="gold">Billionaires'mindset</strong>
+                    est une invitation à apprendre, à réfléchir et à agir
+                    avec davantage de méthode dans la poursuite de ses objectifs.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- ACHAT ET PAIEMENT -->
+        <section class="purchase" id="acheter">
+
+            <div class="purchase-box">
+
+                <h2>Procurez-vous votre exemplaire</h2>
+
+                <p>
+                    Le livre est proposé au format PDF.
+                </p>
+
+                <div class="price">2 000 F CFA</div>
+
+                <div class="payment-info">
+                    <h3>Modes de paiement</h3>
+
+                    <p>
+                        <strong>Moov Money :</strong>
+                        01 65 13 56 30
+                    </p>
+
+                    <p>
+                        <strong>Celtis :</strong>
+                        01 44 86 69 66
+                    </p>
+
+                    <p class="note">
+                        Effectuez votre paiement, puis contactez l'auteur
+                        sur WhatsApp. L'envoi du PDF se fera après
+                        vérification de la réception du paiement.
+                    </p>
+                </div>
+
+                <!-- NUMÉRO WHATSAPP CORRIGÉ -->
+                <a
+                    class="btn whatsapp-btn"
+                    href="https://wa.me/2290165135630?text=Bonjour%2C%20je%20souhaite%20acheter%20le%20livre%20Billionaires%27mindset%20au%20prix%20de%202000%20F%20CFA."
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Commander sur WhatsApp
+                </a>
+
+                <p class="note">
+                    Prix : 2 000 F CFA. Envoi du livre par WhatsApp
+                    après confirmation du paiement.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+        <p>
+            © <span id="year"></span>
+            <strong>Billionaires'mindset</strong> —
+            HINVI Linaude. Tous droits réservés.
+        </p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
